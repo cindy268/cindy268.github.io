@@ -774,7 +774,7 @@ footer {
 @media (max-width: 600px) {
 
 
-     .cert-card {
+    .cert-card {
         flex-direction: column;
         text-align: center;
     }
@@ -806,7 +806,7 @@ footer {
     }
 
     .big-text {
-        font-size: 4rem;
+        font-size: 3rem;
     }
 
     .overlay-text {
