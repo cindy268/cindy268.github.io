@@ -256,76 +256,21 @@ section {
 
 /* FIX SLIDER agar bisa di-swipe di HP */
 .project-slider-container {
-    overflow-x: auto; /* Aktifkan scroll horizontal */
+    overflow-x: auto;
+    /* Aktifkan scroll horizontal */
     scroll-snap-type: x mandatory;
-    scrollbar-width: none; /* Sembunyikan scrollbar Firefox */
+    scrollbar-width: none;
+    /* Sembunyikan scrollbar Firefox */
 }
+
 .project-slider-container::-webkit-scrollbar {
-    display: none; /* Sembunyikan scrollbar Chrome/Safari */
+    display: none;
+    /* Sembunyikan scrollbar Chrome/Safari */
 }
+
 .project-card {
     scroll-snap-align: start;
 }
-
-/* RESPONSIVE (Update Media Query 768px) */
-@media (max-width: 768px) {
-    .hamburger {
-        display: block;
-        order: 2;
-    }
-    .theme-toggle {
-        order: 3;
-    }
-    .logo {
-        order: 1;
-    }
-header nav {
-        display: none; /* Sembunyi awal */
-        flex-direction: column;
-        position: absolute;
-        top: 80px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100%;
-        background: var(--glass-bg); /* Mengikuti variabel utama */
-        backdrop-filter: blur(20px);
-        border-radius: 20px;
-        padding: 20px;
-        border: 1px solid var(--glass-border);
-        text-align: center;
-        z-index: 1001;
-    }
-
-    /* MENU AKTIF (LIGHT MODE) */
-    header nav.active {
-        display: flex !important; 
-        background: rgba(255, 255, 255, 0.8) !important; 
-        backdrop-filter: blur(25px) saturate(180%);
-        -webkit-backdrop-filter: blur(25px) saturate(180%);
-        box-shadow: 0 50vh 0 50vh rgba(0, 0, 0, 0.4);
-    }
-
-    /* MENU AKTIF (DARK MODE) */
-    /* Kita pakai [data-theme="dark"] sesuai dengan variabel :root kamu di atas */
-    [data-theme="dark"] header nav.active {
-        background: rgba(15, 23, 42, 0.9) !important; /* Warna biru gelap pekat */
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        box-shadow: 0 50vh 0 50vh rgba(0, 0, 0, 0.7);
-    }
-
-    /* Supaya teks tetap terbaca terang di dark mode */
-    [data-theme="dark"] header nav.active a {
-        color: #f8fafc;
-    }
-
-    header nav a {
-        margin: 10px 0;
-    }
-    .project-card {
-        min-width: 85%; /* Supaya kartu berikutnya kelihatan sedikit di pinggir */
-    }
-}
-
 
 
 
@@ -623,13 +568,6 @@ header nav {
     transform: rotate(90deg);
 }
 
-/* Responsif untuk HP */
-@media (max-width: 600px) {
-    .cert-card {
-        flex-direction: column;
-        text-align: center;
-    }
-}
 
 
 /* PROJECTS SLIDER */
@@ -819,7 +757,29 @@ footer {
 }
 
 /* RESPONSIVE */
-@media (max-width: 768px) {
+
+/* REVEAL ANIMATION */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+@media (max-width: 600px) {
+
+
+     .cert-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+
     header nav {
         display: none;
     }
@@ -872,16 +832,69 @@ footer {
 
 
 
-}
 
-/* REVEAL ANIMATION */
-.reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease-out;
-}
 
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
+    .hamburger {
+        display: block;
+        order: 2;
+    }
+
+    .theme-toggle {
+        order: 3;
+    }
+
+    .logo {
+        order: 1;
+    }
+
+    header nav {
+        display: none;
+        /* Sembunyi awal */
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        background: var(--glass-bg);
+        /* Mengikuti variabel utama */
+        backdrop-filter: blur(20px);
+        border-radius: 20px;
+        padding: 20px;
+        border: 1px solid var(--glass-border);
+        text-align: center;
+        z-index: 1001;
+    }
+
+    /* MENU AKTIF (LIGHT MODE) */
+    header nav.active {
+        display: flex !important;
+        background: rgba(255, 255, 255, 0.8) !important;
+        backdrop-filter: blur(25px) saturate(180%);
+        -webkit-backdrop-filter: blur(25px) saturate(180%);
+        box-shadow: 0 50vh 0 50vh rgba(0, 0, 0, 0.4);
+    }
+
+    /* MENU AKTIF (DARK MODE) */
+    /* Kita pakai [data-theme="dark"] sesuai dengan variabel :root kamu di atas */
+    [data-theme="dark"] header nav.active {
+        background: rgba(15, 23, 42, 0.9) !important;
+        /* Warna biru gelap pekat */
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 50vh 0 50vh rgba(0, 0, 0, 0.7);
+    }
+
+    /* Supaya teks tetap terbaca terang di dark mode */
+    [data-theme="dark"] header nav.active a {
+        color: #f8fafc;
+    }
+
+    header nav a {
+        margin: 10px 0;
+    }
+
+    .project-card {
+        min-width: 85%;
+        /* Supaya kartu berikutnya kelihatan sedikit di pinggir */
+    }
 }
