@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Project - Cindy Portfolio</title>
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&family=Pacifico&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Link ke CSS Utama kamu -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* CSS Tambahan Khusus Halaman Detail */
+        .detail-container {
+            margin-top: 120px;
+            margin-bottom: 50px;
+        }
+
+        .detail-wrapper {
+            display: flex;
+            gap: 50px;
+            align-items: flex-start;
+        }
+
+        .detail-img-box {
+            flex: 1.2;
+            border-radius: 25px;
+            overflow: hidden;
+            border: 1px solid var(--glass-border);
+            box-shadow: var(--card-shadow);
+            line-height: 0;
+        }
+
+        .detail-img-box img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .detail-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .project-category-tag {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            width: fit-content;
+        }
+
+        .project-title-large {
+            font-size: 2.8rem;
+            line-height: 1.1;
+            margin: 10px 0;
+        }
+
+        .project-full-desc {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        .detail-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .detail-links a {
+            text-decoration: none;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .detail-links a:hover {
+            color: var(--accent);
+            transform: translateX(8px);
+        }
+
+        .btn-back-home {
+            margin-top: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--glass-bg);
+            color: var(--text-main);
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            border: 1px solid var(--glass-border);
+            transition: 0.3s;
+            font-weight: 600;
+        }
+
+        .btn-back-home:hover {
+            background: var(--accent);
+            color: white;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsif untuk layar kecil */
+        @media (max-width: 992px) {
+            .detail-wrapper {
+                flex-direction: column;
+            }
+
+            .detail-img-box {
+                width: 100%;
+            }
+
+            .project-title-large {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Animasi Background Blobs -->
+    <div class="bg-circles">
+        <div class="circle blue"></div>
+        <div class="circle orange"></div>
+        <div class="circle red"></div>
+        <div class="circle purple"></div>
+    </div>
+
+    <!-- Navbar -->
+    <header>
+        <div class="logo" onclick="location.href='index.html'">Cindy</div>
+        <nav>
+            <a href="index.html#home">Home</a>
+            <a href="index.html#projects">Projects</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+        <div class="theme-toggle" onclick="toggleTheme()">
+            <div class="toggle-ball">
+                <i class="fas fa-sun"></i>
+            </div>
+        </div>
+    </header>
+
+    <main class="detail-container">
+        <section class="glass reveal active">
+            <div class="detail-wrapper" id="detailContent">
+                <!-- SISI KIRI: GAMBAR -->
+                <div class="detail-img-box">
+                    <img id="p-image" src="" alt="Project Image">
+                </div>
+
+                <!-- SISI KANAN: TEKS -->
+                <div class="detail-info">
+                    <!-- <span class="project-category-tag" id="p-category">Category</span> -->
+                    <div style="display: flex; gap: 10px; align-items: center;">
+                        <span class="project-category-tag" id="p-category">Category</span>
+                        <!-- Tambahan Role Tag -->
+                        <span id="p-role" style="font-size: 0.8rem; font-weight: 500; opacity: 0.7;">Role: UI
+                            Designer</span>
+                    </div>
+                    <h1 class="project-title-large" id="p-title">Project Title</h1>
+                    <div class="project-full-desc" id="p-desc">
+                        <!-- Deskripsi otomatis -->
+                    </div>
+
+                    <div class="detail-links">
+                        <a href="#" id="p-link-figma" target="_blank">
+                            <i class="fab fa-figma"></i> Prototype Link
+                        </a>
+                        <a href="#" id="p-link-github" target="_blank">
+                            <i class="fab fa-github"></i> Repository Link
+                        </a>
+                    </div>
+
+                    <a href="index.html#projects" class="btn-back-home">
+                        <i class="fas fa-arrow-left"></i> Back to All Projects
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Cindy • All rights reserved</p>
+    </footer>
+
+    <!-- Script Utama -->
+    <script src="script.js"></script>
+
+    <script>
+        // LOGIKA DYNAMIC CONTENT
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Ambil ID dari URL (?id=nama-project)
+            const params = new URLSearchParams(window.location.search);
+            const projectId = params.get('id');
+
+            // 2. Database Project (Bisa dipindah ke script.js jika mau)
+            const projectData = {
+                'fintech': {
+                    title: "Fintech Mobile App",
+                    category: "UI Design",
+                    role: "Lead UI/UX Designer", // Tambahkan ini
+                    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800",
+                    desc: "Sebuah solusi digital untuk manajemen keuangan pribadi yang mencakup pelacakan pengeluaran, transfer instan, dan analisis tabungan bulanan. Desain ini mengedepankan kemudahan navigasi bagi pengguna baru.",
+                    figma: "https://figma.com",
+                    github: "https://github.com"
+                },
+                'ecommerce': {
+                    title: "E-Commerce Platform",
+                    category: "Web Development",
+                    role: "Lead UI/UX Designer", // Tambahkan ini
+                    image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=800",
+                    desc: "Website belanja online yang sepenuhnya responsif dengan fitur keranjang belanja, checkout, dan integrasi payment gateway. Dibangun dengan fokus pada kecepatan performa.",
+                    figma: "#",
+                    github: "https://github.com"
+                },
+                'health': {
+                    title: "Health Track System",
+                    category: "UI Design",
+                    role: "Lead UI/UX Designer", // Tambahkan ini
+                    image: "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=800",
+                    desc: "Aplikasi pemantau kesehatan harian yang terintegrasi dengan sensor detak jantung. Menyediakan visualisasi data yang bersih dan mudah dipahami.",
+                    figma: "https://figma.com",
+                    github: "#"
+                }
+            };
+
+            // 3. Masukkan data ke HTML
+            const project = projectData[projectId];
+
+            if (project) {
+                document.getElementById('p-title').innerText = project.title;
+                document.getElementById('p-category').innerText = project.category;
+                document.getElementById('p-role').innerText = "Role: " + project.role; // Tampilkan role
+                document.getElementById('p-desc').innerText = project.desc;
+                document.getElementById('p-image').src = project.image;
+                document.getElementById('p-link-figma').href = project.figma;
+                document.getElementById('p-link-github').href = project.github;
+                document.title = `Project | ${project.title}`; // Ubah judul tab browser
+            } else {
+                // Jika tidak ada data, tampilkan pesan error
+                document.getElementById('detailContent').innerHTML = `
+                    <div style="text-align:center; width:100%; padding: 50px;">
+                        <h2>Project Tidak Ditemukan</h2>
+                        <a href="index.html" class="btn-back-home">Kembali ke Home</a>
+                    </div>
+                `;
+            }
+
+            // 4. Pastikan Tema (Light/Dark) sinkron
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            const icon = document.querySelector('.toggle-ball i');
+            if (savedTheme === 'dark' && icon) {
+                icon.classList.replace('fa-sun', 'fa-moon');
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,39 +1,357 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Cindy</title>
+    <title>Cindy Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&family=Pacifico&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+    <!-- Animasi Background Blobs -->
+    <div class="bg-circles">
+        <div class="circle blue"></div>
+        <div class="circle orange"></div>
+        <div class="circle red"></div>
+        <div class="circle purple"></div>
+    </div>
+
     <header>
-        <h1>Cindy</h1>
-        <p>Web Developer</p>
+        <div class="logo" onclick="scrollToTop()">Cindy</div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav id="navMenu">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#education">Education</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="theme-toggle" onclick="toggleTheme()">
+            <div class="toggle-ball">
+                <i class="fas fa-sun"></i>
+            </div>
+        </div>
     </header>
 
-    <h1>HALLO</h1>
-<H3>ASJFS</H3>
-    <section>
-        <h2>Tentang Saya</h2>
-        <p>Ini portfolio pertama saya</p>
-    </section>
+    <main>
+        <!-- HERO -->
+        <section id="home" class="hero reveal">
+            <div class="hero-content">
+                <h1 class="big-text">Portfolio</h1>
+                <h2 class="overlay-text">Cindy</h2>
+                <p class="tagline">Accounting Control • UI Designer • Continous Learner</p>
+                <div class="hero-info">
+                    <span><i class="fab fa-linkedin"></i> linkedin.com/in/cindy</span>
+                    <span><i class="fas fa-envelope"></i> cindy@email.com</span>
+                </div>
+            </div>
+        </section>
 
-    <section>
-        <h2>Project</h2>
-        <ul>
-            <li>Perpustakaan Web</li>
-            <li>To Do App</li>
-        </ul>
-    </section>
+        <!-- ABOUT -->
+        <section id="about" class="glass reveal">
+            <div class="about-wrap">
+                <div class="about-text">
+                    <h2 class="section-title">About Me</h2>
+                    <p>I am an Accounting Control professional and an Information Systems student. In my current role, I
+                        am responsible for reviewing and ensuring the accuracy of various reports and related data. In
+                        addition, I have basic experience in web development and creating UI prototypes using Figma,
+                        which helps me understand how digital solutions can be designed in a simple and effective way. I
+                        am a detail-oriented and responsible individual with a strong willingness to learn and grow.
+                    </p>
+                </div>
+                <div class="about-img-container">
+                    <div class="circle-frame">
+                        <img src="assets/images/foto.png" alt="Profile">
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-container">
+                <div class="skill-group">
+                    <h3>Hard Skills</h3>
+                    <div class="skill-items">
+                        <div class="skill-card"><i class="devicon-html5-plain colored"></i> HTML</div>
+                        <div class="skill-card"><i class="devicon-css3-plain colored"></i> CSS</div>
+                        <div class="skill-card"><i class="devicon-javascript-plain colored"></i> JS</div>
+                        <div class="skill-card"><i class="devicon-php-plain colored"></i> PHP</div>
+                        <div class="skill-card"><i class="devicon-figma-plain colored"></i> Figma</div>
+                        <div class="skill-card"><i class="devicon-canva-original colored"></i> Canva</div>
+                        <div class="skill-card"><i class="fas fa-file-excel" style="color: #217346;"></i> MS Office
+                        </div>
+                        <div class="skill-card"><i class="fas fa-calculator" style="color: #e67e22;"></i> Accurate</div>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3>Soft Skills</h3>
+                    <div class="skill-items">
+                        <div class="skill-card"><i class="fas fa-comments"></i> Communication</div>
+                        <div class="skill-card"><i class="fas fa-users"></i> Teamwork</div>
+                        <div class="skill-card"><i class="fas fa-lightbulb"></i> Problem Solving</div>
+                        <div class="skill-card"><i class="fas fa-chart-line"></i> Data Analysis</div>
+                        <div class="skill-card"><i class="fas fa-brain"></i> Analytical Skills</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section id="experience" class="glass reveal">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="experience-grid">
+                <div class="timeline-item">
+                    <div class="dot"></div>
+                    <div class="content">
+                        <h3>Accounting Control</h3>
+                        <span class="year">Apr 2023 - Present</span>
+                        <p></p>
+                        <ul class="work-list">
+                            <li>Ensured the accuracy and completeness of transaction records entered by the accounting
+                                team at the head office across three company branches.</li>
+                            <li>Reviewed and verified daily operational reports to ensure accuracy and consistency.</li>
+                            <li>Performed monthly reviews of financial reports from each accounting staff member.</li>
+                            <li>Monitored and ensured timely updates of recorded data.</li>
+                            <li>Identified data discrepancies and coordinated corrections with relevant parties.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="dot"></div>
+                    <div class="content">
+                        <h3>Accounting Staff</h3>
+                        <span class="year">Agt 2022 - Mar 2023</span>
+                        <p></p>
+                        <ul class="work-list">
+                            <li>Recorded daily transactions in accounting software.</li>
+                            <li>Ensured the completeness and accuracy of transaction data before processing.</li>
+                            <li>Prepared monthly financial reports.</li>
+                            <li>Maintained well-organized and systematically archived documents.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="dot"></div>
+                    <div class="content">
+                        <h3>Student Intership - Sekretariat</h3>
+                        <span class="year">Feb 2021 - May 2021</span>
+                        <p></p>
+                        <ul class="work-list">
+                            <li>Managed incoming and outgoing correspondence.</li>
+                            <li>Archived administrative documents in a systematic and well-structured manner.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="organization" class="glass reveal">
+            <h2 class="section-title">Organization Experience</h2>
+            <div class="experience-grid">
+                <div class="timeline-item">
+                    <div class="dot"></div>
+                    <div class="content">
+                        <h3>Nama Organisasi</h3>
+                        <span class="year">2023 - 2024</span>
+                        <p>Jabatan / Posisi</p>
+                        <ul class="work-list">
+                            <li>Menjelaskan tanggung jawab atau pencapaian kamu di sini.</li>
+                            <li>Detail kegiatan yang relevan.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- EDUCATION -->
+        <section id="education" class="glass reveal">
+            <h2 class="section-title">Education</h2>
+            <div class="edu-split">
+                <div class="edu-box left">
+                    <h3></h3>
+                    <p>Bachelor of Information Systems</p>
+                    <span class="year">2022 - Present</span>
+                    <div class="gpa-badge">GPA 3.93 / 4.00</div>
+                </div>
+                <div class="divider"></div>
+                <div class="edu-box right">
+                    <h3></h3>
+                    <p>Competency of Accounting and Financial Skills Institutions</p>
+                    <span class="year">2019 - 2022</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- CERTIFICATIONS -->
+        <section id="certifications" class="glass reveal">
+            <h2 class="section-title">Certifications</h2>
+
+            <div class="cert-grid">
+                <!-- Sertifikat 1 -->
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="cert-info">
+                        <h3>
+                            Competency of Accounting and Financial Skills Institutions</h3>
+                        <p class="issuer">Badan Nasional Sertifikasi Profesi (BNSP)</p>
+                        <p class="year">Issued Apr 2022 · Expires Apr 2025</p>
+                        <button onclick="openCert('assets/images/certifications/bnsp.jpeg')" class="view-link"
+                            style="background:none; border:none; cursor:pointer;">
+                            View Certificate <i class="fas fa-external-link-alt"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Sertifikat 2 -->
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="cert-info">
+                        <h3>Junior Computer Operator</h3>
+                        <p class="issuer">Badan Nasional Sertifikasi Profesi (BNSP)</p>
+                        <p class="year">Issued May 2023 · Expires May 2026</p>
+                        <button onclick="openCert('assets/images/certifications/bnsp2.jpeg')" class="view-link"
+                            style="background:none; border:none; cursor:pointer;">
+                            View Certificate <i class="fas fa-external-link-alt"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Sertifikat 3 -->
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="cert-info">
+                        <h3>Accurate Professional</h3>
+                        <p class="issuer">Maju Mandiri Utama</p>
+                        <p class="year">Issued 2024</p>
+                        <button onclick="openCert('assets/images/certifications/bnsp.jpeg')" class="view-link"
+                            style="background:none; border:none; cursor:pointer;">
+                            View Certificate <i class="fas fa-external-link-alt"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects" class="glass reveal">
+            <h2 class="section-title">My Projects</h2>
+            <div class="project-slider-container">
+                <div class="project-scroll" id="projectScroll">
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <small>UI Design</small>
+                        <div class="img-box">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=400"
+                                alt="p1">
+                        </div>
+                        <h3>Ecofy App</h3>
+                        <!-- <button class="btn-detail" onclick="showDetail('Fintech App')">Detail</button> -->
+                        <button class="btn-detail"
+                            onclick="location.href='project-detail.html?id=fintech'">Detail</button>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <small>UI Design</small>
+                        <div class="img-box">
+                            <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=400"
+                                alt="p2">
+                        </div>
+                        <h3>MotoCar Rental</h3>
+                        <button class="btn-detail"
+                            onclick="location.href='project-detail.html?id=ecommerce'">Detail</button>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="project-card">
+                        <small>Web Developer</small>
+                        <div class="img-box">
+                            <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&q=80&w=400"
+                                alt="p3">
+                        </div>
+                        <h3>SMKS Advent Website Company Profile</h3>
+                        <button class="btn-detail"
+                            onclick="location.href='project-detail.html?id=health'">Detail</button>
+                    </div>
+                    <!-- Project 4 -->
+                    <div class="project-card">
+                        <small>Web Developer</small>
+                        <div class="img-box">
+                            <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&q=80&w=400"
+                                alt="p3">
+                        </div>
+                        <h3>SMKS Advent Website Company Profile</h3>
+                        <button class="btn-detail"
+                            onclick="location.href='project-detail.html?id=health'">Detail</button>
+                    </div>
+                </div>
+            </div>
+            <div class="dots-container">
+                <span class="dot-ind active"></span>
+                <span class="dot-ind"></span>
+                <span class="dot-ind"></span>
+            </div>
+        </section>
+
+        <!-- CONTACT
+        <section id="contact" class="glass reveal">
+            <div class="contact-wrap">
+                <div class="contact-left">
+                    <p class="small-tag">Let’s work together!</p>
+                    <h2 class="contact-title">Contact Me</h2>
+                </div>
+                <div class="contact-items">
+                    <a href="mailto:email@example.com">Email</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">WhatsApp</a>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- CONTACT -->
+        <section id="contact" class="glass reveal">
+            <div class="contact-wrap">
+                <div class="contact-left">
+                    <p class="small-tag">Let’s work together!</p>
+                    <h2 class="contact-title">Contact Me</h2>
+                </div>
+
+                <div class="contact-items">
+                    <a>
+                        <i class="fas fa-envelope"></i> 
+                    </a>
+                    <a href="https://www.linkedin.com/in/cindy26" target="_blank">
+                        <i class="fab fa-linkedin"></i> 
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>© 2026 Cindy</p>
+        <p>© 2026 Cindy. All Rights Reserved.</p>
     </footer>
 
     <script src="script.js"></script>
+
+
+    <div id="certModal" class="cert-modal" onclick="closeModal()">
+        <span class="close-btn">&times;</span>
+        <img class="modal-content" id="imgFull">
+    </div>
 </body>
 
 </html>
